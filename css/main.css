@@ -1919,7 +1919,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #714bff;
+  background: #1abeac;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2760,7 +2760,7 @@ embed {
 }
 code {
   color: #ff7600;
-  background: #000;
+  background: #f00;
   margin: 2px;
 }
 .highlight,
