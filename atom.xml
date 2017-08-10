@@ -43,6 +43,34 @@
   </entry>
   
   <entry>
+    <title>java集合类总览</title>
+    <link href="http://wenni328.github.io.com/2017/01/17/java%E9%9B%86%E5%90%88%E7%B1%BB%E6%80%BB%E8%A7%88/"/>
+    <id>http://wenni328.github.io.com/2017/01/17/java集合类总览/</id>
+    <published>2017-01-17T05:09:31.000Z</published>
+    <updated>2017-08-10T05:51:38.746Z</updated>
+    
+    <content type="html"><![CDATA[<p>Java所有的集合类都在java.util包中。</p>
+<h3 id="Java最常用的集合类"><a href="#Java最常用的集合类" class="headerlink" title="Java最常用的集合类"></a>Java最常用的集合类</h3><h4 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h4><ul>
+<li>–List接口(允许有重复元素)：ArrayList、LinkList、Vector、Stack</li>
+<li>–Set接口(不允许用重复值) ：HashSet、TreeSet</li>
+</ul>
+<h4 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h4><ul>
+<li>–HashMap</li>
+<li>–TreeMap(具有按key排序功能)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Java所有的集合类都在java.util包中。&lt;/p&gt;
+&lt;h3 id=&quot;Java最常用的集合类&quot;&gt;&lt;a href=&quot;#Java最常用的集合类&quot; class=&quot;headerlink&quot; title=&quot;Java最常用的集合类&quot;&gt;&lt;/a&gt;Java最常用的集合类&lt;/h3&gt;&lt;h4 i
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hexo搭建免费博客</title>
     <link href="http://wenni328.github.io.com/2017/01/16/hexo%E9%9A%8F%E7%AC%94/"/>
     <id>http://wenni328.github.io.com/2017/01/16/hexo随笔/</id>
