@@ -96,17 +96,17 @@
 
 
 
-<meta name="description" content="Java所有的集合类都在java.util包中。 Java最常用的集合类Collection接口 –List接口(允许有重复元素)：ArrayList、LinkList、Vector、Stack –Set接口(不允许用重复值) ：HashSet、TreeSet  Map接口 –HashMap –TreeMap(具有按key排序功能)">
+<meta name="description" content="Java所有的集合类都在java.util包中。 Java最常用的集合类Collection接口 –List接口(允许有重复元素)：ArrayList、LinkList、Vector、Stack –Set接口(不允许用重复值) ：HashSet、TreeSet">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java集合类总览">
 <meta property="og:url" content="http://wenni328.github.io.com/2017/01/17/java集合类总览/index.html">
 <meta property="og:site_name" content="陪你度过漫长的岁月的博客">
-<meta property="og:description" content="Java所有的集合类都在java.util包中。 Java最常用的集合类Collection接口 –List接口(允许有重复元素)：ArrayList、LinkList、Vector、Stack –Set接口(不允许用重复值) ：HashSet、TreeSet  Map接口 –HashMap –TreeMap(具有按key排序功能)">
+<meta property="og:description" content="Java所有的集合类都在java.util包中。 Java最常用的集合类Collection接口 –List接口(允许有重复元素)：ArrayList、LinkList、Vector、Stack –Set接口(不允许用重复值) ：HashSet、TreeSet">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2017-08-10T05:51:38.746Z">
+<meta property="og:updated_time" content="2017-08-10T12:54:15.942Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java集合类总览">
-<meta name="twitter:description" content="Java所有的集合类都在java.util包中。 Java最常用的集合类Collection接口 –List接口(允许有重复元素)：ArrayList、LinkList、Vector、Stack –Set接口(不允许用重复值) ：HashSet、TreeSet  Map接口 –HashMap –TreeMap(具有按key排序功能)">
+<meta name="twitter:description" content="Java所有的集合类都在java.util包中。 Java最常用的集合类Collection接口 –List接口(允许有重复元素)：ArrayList、LinkList、Vector、Stack –Set接口(不允许用重复值) ：HashSet、TreeSet">
 
 
 
@@ -334,12 +334,15 @@
         <p>Java所有的集合类都在java.util包中。</p>
 <h3 id="Java最常用的集合类"><a href="#Java最常用的集合类" class="headerlink" title="Java最常用的集合类"></a>Java最常用的集合类</h3><h4 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h4><ul>
 <li>–List接口(允许有重复元素)：ArrayList、LinkList、Vector、Stack</li>
-<li>–Set接口(不允许用重复值) ：HashSet、TreeSet</li>
+<li>–Set接口(不允许用重复值) ：HashSet、TreeSet<a id="more"></a>
+</li>
 </ul>
 <h4 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h4><ul>
 <li>–HashMap</li>
 <li>–TreeMap(具有按key排序功能)</li>
 </ul>
+<h3 id="对于Collection需要掌握的七点常用内容"><a href="#对于Collection需要掌握的七点常用内容" class="headerlink" title="对于Collection需要掌握的七点常用内容"></a>对于Collection需要掌握的七点常用内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Collection的创建：即构造器，掌握在构造器方法中Collection的实现类做了一些什么</div><div class="line">往Collection中添加对象：即add(E)方法---&gt;类的实现方式决定了此方法的性能</div><div class="line">删除Collection中的对象：即remove(E)方法---&gt;类的实现方式决定了此方法的性能</div><div class="line">获取Collection中的单个对象：即get(int index)方法---&gt;类的实现方式决定了此方法的性能</div><div class="line">遍历Collection中的对象：即iterator，在实际中更常用的是增强型的<span class="keyword">for</span>循环去做遍历</div><div class="line">判断对象是否存在于Collection中：contain(E)---&gt;类的实现方式决定了此方法的性能</div><div class="line">Collection中对象的排序：主要取决于所采取的排序算法</div></pre></td></tr></table></figure>
+<h3 id="对于Map需要掌握的七点常用内容"><a href="#对于Map需要掌握的七点常用内容" class="headerlink" title="对于Map需要掌握的七点常用内容"></a>对于Map需要掌握的七点常用内容</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Map的创建：即构造器，掌握在构造器方法中Map的实现类做了一些什么</div><div class="line">往Map中添加键值对：即put(Object key, Object value)方法</div><div class="line">删除Map中的对象：即remove(Object key)方法</div><div class="line">获取Map中的单个对象：即get(Object key)方法</div><div class="line">判断对象是否存在于Map中：containsKey(Object key)</div><div class="line">遍历Map中的对象：即keySet()和iterator，在实际中更常用的是增强型的<span class="keyword">for</span>循环去做遍历</div><div class="line">Map中对象的排序：主要取决于所采取的排序算法</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -521,7 +524,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java最常用的集合类"><span class="nav-number">1.</span> <span class="nav-text">Java最常用的集合类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Collection接口"><span class="nav-number">1.1.</span> <span class="nav-text">Collection接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Map接口"><span class="nav-number">1.2.</span> <span class="nav-text">Map接口</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java最常用的集合类"><span class="nav-number">1.</span> <span class="nav-text">Java最常用的集合类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Collection接口"><span class="nav-number">1.1.</span> <span class="nav-text">Collection接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Map接口"><span class="nav-number">1.2.</span> <span class="nav-text">Map接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对于Collection需要掌握的七点常用内容"><span class="nav-number">2.</span> <span class="nav-text">对于Collection需要掌握的七点常用内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对于Map需要掌握的七点常用内容"><span class="nav-number">3.</span> <span class="nav-text">对于Map需要掌握的七点常用内容</span></a></li></ol></div>
             
 
           </div>

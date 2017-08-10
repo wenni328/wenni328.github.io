@@ -106,7 +106,7 @@
 <meta property="og:image" content="http://oufb2rqt9.bkt.clouddn.com/gitub.PNG">
 <meta property="og:image" content="http://oufb2rqt9.bkt.clouddn.com/hexo%E7%9B%AE%E5%BD%95.png">
 <meta property="og:image" content="http://oufb2rqt9.bkt.clouddn.com/%60V%29$B~GB2I%5DVYOB4Y0~OJGT.png">
-<meta property="og:updated_time" content="2017-08-10T04:51:01.049Z">
+<meta property="og:updated_time" content="2017-08-10T11:46:28.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建免费博客">
 <meta name="twitter:description" content="准备条件 首先你得有一个自己的github账号，没有的话去注册一个吧。 其次你的电脑上需要安装nodeJs和npm，这是前提条件。 第三，作为一个开发者，git怎么能缺少呢，安装一个git for windows客户端吧。  搭建你的博客创建Github仓库   新建一个名为: 你的用户名.github.io的仓库,比如我的github用户名是wenni328,新建的仓库就为wenni328.gi">
@@ -340,7 +340,7 @@
 <li>其次你的电脑上需要<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">安装</a>nodeJs和npm，这是前提条件。</li>
 <li>第三，作为一个开发者，git怎么能缺少呢，安装一个git for windows客户端吧。</li>
 </ol>
-<h3 id="搭建你的博客"><a href="#搭建你的博客" class="headerlink" title="搭建你的博客"></a>搭建你的博客</h3><h4 id="创建Github仓库"><a href="#创建Github仓库" class="headerlink" title="创建Github仓库"></a>创建Github仓库</h4><p>   新建一个名为: 你的用户名.github.io的仓库,比如我的github用户名是wenni328,新建的仓库就为wenni328.github.io(<font color="red">这里必须是你的用户名</font>)</p>
+<h3 id="搭建你的博客"><a href="#搭建你的博客" class="headerlink" title="搭建你的博客"></a>搭建你的博客</h3><h4 id="创建Github仓库"><a href="#创建Github仓库" class="headerlink" title="创建Github仓库"></a>创建Github仓库</h4><p>   新建一个名为: 你的用户名.github.io的仓库,比如我的github用户名是wenni328,新建的仓库就为wenni328.github.io(<font color="red">这里必须是你的用户名</font>)<br><a id="more"></a></p>
 <h4 id="配置ssh-key"><a href="#配置ssh-key" class="headerlink" title="配置ssh key"></a>配置ssh key</h4><p>在git命令窗口输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh key</span></div></pre></td></tr></table></figure></p>
 <p>如果提示：No such file or directory，说明你是第一次使用git，需要自动生成一下<br>输入如下命令，按三次回车键即可生成一份<font color="#CDAD00">.ssh\id_rsa.pub</font>文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></div></pre></td></tr></table></figure></p>
 <p>用记事本打开这份生成的文件，ctrl+a复制里面内容，登录你的github找到SSH and GPG keys，选择New,然后将复制内容粘贴到内容框就行<br><img src="http://oufb2rqt9.bkt.clouddn.com/gitub.PNG" alt="步骤说明"><br>然后我们测试一下ssh key是否配置成功，git窗口输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com <span class="comment">#直接复制这句，不用改</span></div></pre></td></tr></table></figure></p>
