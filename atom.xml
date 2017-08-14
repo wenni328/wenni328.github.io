@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wenni328.github.io.com/"/>
-  <updated>2017-08-14T07:19:45.809Z</updated>
+  <updated>2017-08-14T07:32:37.939Z</updated>
   <id>http://wenni328.github.io.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wenni328.github.io.com/2017/02/10/springboot%E5%90%AF%E7%A4%BA%E7%AF%87/"/>
     <id>http://wenni328.github.io.com/2017/02/10/springboot启示篇/</id>
     <published>2017-02-10T13:54:48.000Z</published>
-    <updated>2017-08-14T07:19:45.809Z</updated>
+    <updated>2017-08-14T07:32:37.939Z</updated>
     
     <content type="html"><![CDATA[<h3 id="什么是springboot"><a href="#什么是springboot" class="headerlink" title="什么是springboot"></a>什么是springboot</h3><p>springboot是为了简化spring的创建、配置、等而出现的。使用springboot构建web项目，程序员不用过多考虑xml配置整合问题只需要专注写代码业务。springboot默认使用tomcat作为服务器，使用logback提供日志记录。</p>
 <h3 id="用springboot构建你的第一个web工程"><a href="#用springboot构建你的第一个web工程" class="headerlink" title="用springboot构建你的第一个web工程"></a>用springboot构建你的第一个web工程</h3><h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><ul>
@@ -40,6 +40,8 @@
     
     </summary>
     
+    
+      <category term="springboot" scheme="http://wenni328.github.io.com/tags/springboot/"/>
     
   </entry>
   
