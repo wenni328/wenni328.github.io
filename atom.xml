@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wenni328.github.io.com/"/>
-  <updated>2017-09-02T10:29:14.890Z</updated>
+  <updated>2017-09-02T10:58:57.466Z</updated>
   <id>http://wenni328.github.io.com/</id>
   
   <author>
@@ -20,19 +20,25 @@
     <link href="http://wenni328.github.io.com/2017/09/02/vue-webpack%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA/"/>
     <id>http://wenni328.github.io.com/2017/09/02/vue-webpack工程搭建/</id>
     <published>2017-09-02T09:01:15.000Z</published>
-    <updated>2017-09-02T10:29:14.890Z</updated>
+    <updated>2017-09-02T10:58:57.466Z</updated>
     
     <content type="html"><![CDATA[<h3 id="第一步：前提条件"><a href="#第一步：前提条件" class="headerlink" title="第一步：前提条件"></a>第一步：前提条件</h3><ul>
 <li>–node是必须安装好的，不会的同学请移步<a href="http://www.runoob.com/nodejs/" target="_blank" rel="external">node安装</a> </li>
 <li>–git for windows也是必须先安装的</li>
 <li>–npm装逼神器也是需要先安装的，<a href="http://jingyan.baidu.com/article/a17d528506d7f58098c8f2b0.html" target="_blank" rel="external">npm安装</a></li>
 </ul>
-<p>查看本地是否成功安装node和npm(建议使用git for window)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line"></div><div class="line"><span class="variable">$npm</span> -v</div></pre></td></tr></table></figure></p>
+<p>查看本地是否成功安装node和npm(建议使用git for window)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line"></div><div class="line">$ npm -v</div></pre></td></tr></table></figure></p>
 <h3 id="第二步：安装vue-cli工具"><a href="#第二步：安装vue-cli工具" class="headerlink" title="第二步：安装vue-cli工具"></a>第二步：安装vue-cli工具</h3><p>说白了就是安装好 vue这个指令工具，其他作用我们暂时不管<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g vue-cli  <span class="comment">#等待时间可能会长一些</span></div></pre></td></tr></table></figure></p>
 <h3 id="第三步：生成vue-webpack模板"><a href="#第三步：生成vue-webpack模板" class="headerlink" title="第三步：生成vue-webpack模板"></a>第三步：生成vue-webpack模板</h3><p>vue官方提供了两种webpack模板，分别是vue-webpack-simple和vue-webpack</p>
 <h4 id="Webpack简介"><a href="#Webpack简介" class="headerlink" title="Webpack简介"></a>Webpack简介</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Webpack是当下最热门的前端资源模块化管理和打包工具，</div><div class="line">它可以将很多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源，</div><div class="line">还可以将按需加载的模块进行代码分割，等到实际需要的时候再异步加载。通过 loader 的转换，</div><div class="line">任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。</div></pre></td></tr></table></figure>
-<h4 id="vue-webpack模板生成"><a href="#vue-webpack模板生成" class="headerlink" title="vue-webpack模板生成"></a>vue-webpack模板生成</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vue init vue-webpack webpack</div></pre></td></tr></table></figure>
-<p>如图<a href="http://oufb2rqt9.bkt.clouddn.com/vue-webpack%E5%B7%A5%E7%A8%8B.png" target="_blank" rel="external">vue-webpack</a><br><br>生成的目录结构为<a href="http://oufb2rqt9.bkt.clouddn.com/webpack%E7%9B%AE%E5%BD%95%E5%9B%BE.PNG" target="_blank" rel="external">webpack目录图</a></p>
+<h4 id="vue-webpack模板生成"><a href="#vue-webpack模板生成" class="headerlink" title="vue-webpack模板生成"></a>vue-webpack模板生成</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vue init vue-webpack webpack <span class="comment">#等待时间较长</span></div></pre></td></tr></table></figure>
+<p>vue-webpack依赖加入(进入项目)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>如图<img src="http://oufb2rqt9.bkt.clouddn.com/vue-webpack%E5%B7%A5%E7%A8%8B.png" alt="vue-webpack"><br><br>最终生成的目录结构为<img src="http://oufb2rqt9.bkt.clouddn.com/webpack%E7%9B%AE%E5%BD%95%E5%9B%BE.PNG" alt="webpack目录图"></p>
+<p>运行指令如下，浏览器自动打开<a href="http://localhost:8080/#/" target="_blank" rel="external">http://localhost:8080/#/</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run dev</div></pre></td></tr></table></figure></p>
+<p>运行成功标志<br><img src="http://oufb2rqt9.bkt.clouddn.com/vue-webpack%E8%BF%90%E8%A1%8C%E6%88%90%E5%8A%9F%E6%A0%87%E5%BF%97.PNG" alt="vue-webpack运行成功标志"></p>
+<h3 id="第四步：生成vue-webpack-simple模板"><a href="#第四步：生成vue-webpack-simple模板" class="headerlink" title="第四步：生成vue-webpack-simple模板"></a>第四步：生成vue-webpack-simple模板</h3><p>与生成vue-webpack模板类似操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vue init webpack-simple 项目名称  <span class="comment">#等待</span></div></pre></td></tr></table></figure></p>
+<p>此时生成的模板结构<img src="http://oufb2rqt9.bkt.clouddn.com/webpack-simple.PNG" alt="webpack-simple"><br>加入依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>之后项目会多出一个node_modules,如图<br><img src="" alt="依赖后"></p>
 ]]></content>
     
     <summary type="html">
