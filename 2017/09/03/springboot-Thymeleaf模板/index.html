@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="陪你度过漫长的岁月">
 <meta property="og:description" content="首先在pom.xml中加入Thymeleaf依赖12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt;    &amp;lt;version&amp;gt;1.5.6">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2017-09-02T16:58:06.549Z">
+<meta property="og:updated_time" content="2017-09-02T16:59:47.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springboot+Thymeleaf模板">
 <meta name="twitter:description" content="首先在pom.xml中加入Thymeleaf依赖12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt;    &amp;lt;version&amp;gt;1.5.6">
@@ -338,7 +338,7 @@
 <p>但是这样的话springboot访问时候会出现页面错误，因为springboot默认使用Thymeleaf2.0,2.0版本对语法格式要求比较严格，比如代码的结尾一定要/&gt;<br>两种解决错误方式</p>
 <ul>
 <li><p>–一是修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=&quot;UTF-8&quot;/&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=<span class="string">"UTF-8"</span>/&gt;</div></pre></td></tr></table></figure>
 </li>
 <li><p>–二是修改Thymeleaf版本，3.0对格式要求放宽了<br>在pom.xml中加入</p>
 </li>
