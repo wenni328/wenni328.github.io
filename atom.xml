@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wenni328.github.io.com/"/>
-  <updated>2017-09-02T10:58:57.466Z</updated>
+  <updated>2017-09-02T11:13:24.699Z</updated>
   <id>http://wenni328.github.io.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wenni328.github.io.com/2017/09/02/vue-webpack%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA/"/>
     <id>http://wenni328.github.io.com/2017/09/02/vue-webpack工程搭建/</id>
     <published>2017-09-02T09:01:15.000Z</published>
-    <updated>2017-09-02T10:58:57.466Z</updated>
+    <updated>2017-09-02T11:13:24.699Z</updated>
     
     <content type="html"><![CDATA[<h3 id="第一步：前提条件"><a href="#第一步：前提条件" class="headerlink" title="第一步：前提条件"></a>第一步：前提条件</h3><ul>
 <li>–node是必须安装好的，不会的同学请移步<a href="http://www.runoob.com/nodejs/" target="_blank" rel="external">node安装</a> </li>
@@ -38,7 +38,7 @@
 <p>运行成功标志<br><img src="http://oufb2rqt9.bkt.clouddn.com/vue-webpack%E8%BF%90%E8%A1%8C%E6%88%90%E5%8A%9F%E6%A0%87%E5%BF%97.PNG" alt="vue-webpack运行成功标志"></p>
 <h3 id="第四步：生成vue-webpack-simple模板"><a href="#第四步：生成vue-webpack-simple模板" class="headerlink" title="第四步：生成vue-webpack-simple模板"></a>第四步：生成vue-webpack-simple模板</h3><p>与生成vue-webpack模板类似操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vue init webpack-simple 项目名称  <span class="comment">#等待</span></div></pre></td></tr></table></figure></p>
 <p>此时生成的模板结构<img src="http://oufb2rqt9.bkt.clouddn.com/webpack-simple.PNG" alt="webpack-simple"><br>加入依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
-<p>之后项目会多出一个node_modules,如图<br><img src="" alt="依赖后"></p>
+<p>之后项目会多出一个node_modules,如图<br><img src="http://oufb2rqt9.bkt.clouddn.com/%E4%BE%9D%E8%B5%96%E5%90%8E.PNG" alt="依赖后"></p>
 ]]></content>
     
     <summary type="html">
