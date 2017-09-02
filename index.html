@@ -265,6 +265,140 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wenni328.github.io.com/2017/09/03/springboot-Thymeleaf模板/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陪你度过漫长的岁月">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陪你度过漫长的岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/03/springboot-Thymeleaf模板/" itemprop="url">springboot+Thymeleaf模板</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T00:32:53+08:00">
+                2017-09-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="首先在pom-xml中加入Thymeleaf依赖"><a href="#首先在pom-xml中加入Thymeleaf依赖" class="headerlink" title="首先在pom.xml中加入Thymeleaf依赖"></a>首先在pom.xml中加入Thymeleaf依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.5.6.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+<h3 id="application-yml-设置-thyemleaf"><a href="#application-yml-设置-thyemleaf" class="headerlink" title="application.yml 设置 thyemleaf"></a>application.yml 设置 thyemleaf</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">spring:</div><div class="line"> thymeleaf:</div><div class="line">   cache: <span class="literal">false</span></div><div class="line">   prefix: classpath:/templates/</div><div class="line">   suffix: .html</div><div class="line">   encoding: UTF-8</div><div class="line">   content-type: text/html</div><div class="line">   mode: HTML5</div></pre></td></tr></table></figure>
+<h3 id="新建H5页面"><a href="#新建H5页面" class="headerlink" title="新建H5页面"></a>新建H5页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>但是这样的话springboot访问时候会出现页面错误，因为springboot默认使用Thymeleaf2.0,2.0版本对语法格式要求比较严格，比如代码的结尾一定要/&gt;<br>两种解决错误方式</p>
+<ul>
+<li>–一是修改<meta charset="UTF-8"></li>
+<li>–二是修改Thymeleaf版本，3.0对格式要求放宽了<br>在pom.xml中加入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;properties&gt;</div><div class="line">     &lt;thymeleaf.version&gt;3.0.2.RELEASE&lt;/thymeleaf.version&gt;</div><div class="line">     &lt;thymeleaf-layout-dialect.version&gt;2.0.4&lt;/thymeleaf-layout-dialect.version&gt;</div><div class="line">&lt;/properties&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在H5中加入Thymeleaf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div></pre></td></tr></table></figure>
+<p>关于<a href="http://www.thymeleaf.org/" target="_blank" rel="external">Thymeleaf标签</a></p>
+
+          
+        
+      
+    </div>
+    <div>
+  
+</div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://wenni328.github.io.com/2017/09/02/vue-webpack工程搭建/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1463,7 +1597,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
