@@ -335,21 +335,14 @@
 
       
         
-          
-            <h3 id="首先在pom-xml中加入Thymeleaf依赖"><a href="#首先在pom-xml中加入Thymeleaf依赖" class="headerlink" title="首先在pom.xml中加入Thymeleaf依赖"></a>首先在pom.xml中加入Thymeleaf依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.5.6.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-<h3 id="application-yml-设置-thyemleaf"><a href="#application-yml-设置-thyemleaf" class="headerlink" title="application.yml 设置 thyemleaf"></a>application.yml 设置 thyemleaf</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">spring:</div><div class="line"> thymeleaf:</div><div class="line">   cache: <span class="literal">false</span></div><div class="line">   prefix: classpath:/templates/</div><div class="line">   suffix: .html</div><div class="line">   encoding: UTF-8</div><div class="line">   content-type: text/html</div><div class="line">   mode: HTML5</div></pre></td></tr></table></figure>
-<h3 id="新建H5页面"><a href="#新建H5页面" class="headerlink" title="新建H5页面"></a>新建H5页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>但是这样的话springboot访问时候会出现页面错误，因为springboot默认使用Thymeleaf2.0,2.0版本对语法格式要求比较严格，比如代码的结尾一定要/&gt;<br>两种解决错误方式</p>
-<ul>
-<li>–一是修改<meta charset="UTF-8"></li>
-<li>–二是修改Thymeleaf版本，3.0对格式要求放宽了<br>在pom.xml中加入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;properties&gt;</div><div class="line">     &lt;thymeleaf.version&gt;3.0.2.RELEASE&lt;/thymeleaf.version&gt;</div><div class="line">     &lt;thymeleaf-layout-dialect.version&gt;2.0.4&lt;/thymeleaf-layout-dialect.version&gt;</div><div class="line">&lt;/properties&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在H5中加入Thymeleaf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div></pre></td></tr></table></figure>
-<p>关于<a href="http://www.thymeleaf.org/" target="_blank" rel="external">Thymeleaf标签</a></p>
-
-          
+          <h3 id="首先在pom-xml中加入Thymeleaf依赖"><a href="#首先在pom-xml中加入Thymeleaf依赖" class="headerlink" title="首先在pom.xml中加入Thymeleaf依赖"></a>首先在pom.xml中加入Thymeleaf依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.5.6.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/03/springboot-Thymeleaf模板/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -469,28 +462,17 @@
 
       
         
-          
-            <h3 id="第一步：前提条件"><a href="#第一步：前提条件" class="headerlink" title="第一步：前提条件"></a>第一步：前提条件</h3><ul>
+          <h3 id="第一步：前提条件"><a href="#第一步：前提条件" class="headerlink" title="第一步：前提条件"></a>第一步：前提条件</h3><ul>
 <li>–node是必须安装好的，不会的同学请移步<a href="http://www.runoob.com/nodejs/" target="_blank" rel="external">node安装</a> </li>
 <li>–git for windows也是必须先安装的</li>
-<li>–npm装逼神器也是需要先安装的，<a href="http://jingyan.baidu.com/article/a17d528506d7f58098c8f2b0.html" target="_blank" rel="external">npm安装</a></li>
-</ul>
-<p>查看本地是否成功安装node和npm(建议使用git for window)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line"></div><div class="line">$ npm -v</div></pre></td></tr></table></figure></p>
-<h3 id="第二步：安装vue-cli工具"><a href="#第二步：安装vue-cli工具" class="headerlink" title="第二步：安装vue-cli工具"></a>第二步：安装vue-cli工具</h3><p>说白了就是安装好 vue这个指令工具，其他作用我们暂时不管<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g vue-cli  <span class="comment">#等待时间可能会长一些</span></div></pre></td></tr></table></figure></p>
-<h3 id="第三步：生成vue-webpack模板"><a href="#第三步：生成vue-webpack模板" class="headerlink" title="第三步：生成vue-webpack模板"></a>第三步：生成vue-webpack模板</h3><p>vue官方提供了两种webpack模板，分别是vue-webpack-simple和vue-webpack</p>
-<h4 id="Webpack简介"><a href="#Webpack简介" class="headerlink" title="Webpack简介"></a>Webpack简介</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Webpack是当下最热门的前端资源模块化管理和打包工具，</div><div class="line">它可以将很多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源，</div><div class="line">还可以将按需加载的模块进行代码分割，等到实际需要的时候再异步加载。通过 loader 的转换，</div><div class="line">任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。</div></pre></td></tr></table></figure>
-<h4 id="vue-webpack模板生成"><a href="#vue-webpack模板生成" class="headerlink" title="vue-webpack模板生成"></a>vue-webpack模板生成</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vue init vue-webpack webpack <span class="comment">#等待时间较长</span></div></pre></td></tr></table></figure>
-<p>vue-webpack依赖加入(进入项目)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
-<p>如图<img src="http://oufb2rqt9.bkt.clouddn.com/vue-webpack%E5%B7%A5%E7%A8%8B.png" alt="vue-webpack"><br><br>最终生成的目录结构为<img src="http://oufb2rqt9.bkt.clouddn.com/webpack%E7%9B%AE%E5%BD%95%E5%9B%BE.PNG" alt="webpack目录图"></p>
-<p>运行指令如下，浏览器自动打开<a href="http://localhost:8080/#/" target="_blank" rel="external">http://localhost:8080/#/</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run dev</div></pre></td></tr></table></figure></p>
-<p>运行成功标志<br><img src="http://oufb2rqt9.bkt.clouddn.com/vue-webpack%E8%BF%90%E8%A1%8C%E6%88%90%E5%8A%9F%E6%A0%87%E5%BF%97.PNG" alt="vue-webpack运行成功标志"></p>
-<h3 id="第四步：生成vue-webpack-simple模板"><a href="#第四步：生成vue-webpack-simple模板" class="headerlink" title="第四步：生成vue-webpack-simple模板"></a>第四步：生成vue-webpack-simple模板</h3><p>与生成vue-webpack模板类似操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vue init webpack-simple 项目名称  <span class="comment">#等待</span></div></pre></td></tr></table></figure></p>
-<p>此时生成的模板结构<img src="http://oufb2rqt9.bkt.clouddn.com/webpack-simple.PNG" alt="webpack-simple"><br>加入依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
-<p>之后项目会多出一个node_modules,如图<br><img src="http://oufb2rqt9.bkt.clouddn.com/%E4%BE%9D%E8%B5%96%E5%90%8E.PNG" alt="依赖后"><br>运行示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run dev</div></pre></td></tr></table></figure></p>
-<p>发布示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run build</div></pre></td></tr></table></figure></p>
-<p>更多知识请自行百度</p>
-
-          
+<li>–npm装逼神器也是需要先安装的，<a href="http://jingyan.baidu.com/article/a17d528506d7f58098c8f2b0.html" target="_blank" rel="external">npm安装</a>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/02/vue-webpack工程搭建/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

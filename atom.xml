@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wenni328.github.io.com/"/>
-  <updated>2017-09-02T16:44:49.843Z</updated>
+  <updated>2017-09-02T16:53:00.082Z</updated>
   <id>http://wenni328.github.io.com/</id>
   
   <author>
@@ -20,17 +20,18 @@
     <link href="http://wenni328.github.io.com/2017/09/03/springboot-Thymeleaf%E6%A8%A1%E6%9D%BF/"/>
     <id>http://wenni328.github.io.com/2017/09/03/springboot-Thymeleaf模板/</id>
     <published>2017-09-02T16:32:53.000Z</published>
-    <updated>2017-09-02T16:44:49.843Z</updated>
+    <updated>2017-09-02T16:53:00.082Z</updated>
     
     <content type="html"><![CDATA[<h3 id="首先在pom-xml中加入Thymeleaf依赖"><a href="#首先在pom-xml中加入Thymeleaf依赖" class="headerlink" title="首先在pom.xml中加入Thymeleaf依赖"></a>首先在pom.xml中加入Thymeleaf依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.5.6.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="application-yml-设置-thyemleaf"><a href="#application-yml-设置-thyemleaf" class="headerlink" title="application.yml 设置 thyemleaf"></a>application.yml 设置 thyemleaf</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">spring:</div><div class="line"> thymeleaf:</div><div class="line">   cache: <span class="literal">false</span></div><div class="line">   prefix: classpath:/templates/</div><div class="line">   suffix: .html</div><div class="line">   encoding: UTF-8</div><div class="line">   content-type: text/html</div><div class="line">   mode: HTML5</div></pre></td></tr></table></figure>
 <h3 id="新建H5页面"><a href="#新建H5页面" class="headerlink" title="新建H5页面"></a>新建H5页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>但是这样的话springboot访问时候会出现页面错误，因为springboot默认使用Thymeleaf2.0,2.0版本对语法格式要求比较严格，比如代码的结尾一定要/&gt;<br>两种解决错误方式</p>
 <ul>
 <li>–一是修改<meta charset="UTF-8"></li>
-<li>–二是修改Thymeleaf版本，3.0对格式要求放宽了<br>在pom.xml中加入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;properties&gt;</div><div class="line">     &lt;thymeleaf.version&gt;3.0.2.RELEASE&lt;/thymeleaf.version&gt;</div><div class="line">     &lt;thymeleaf-layout-dialect.version&gt;2.0.4&lt;/thymeleaf-layout-dialect.version&gt;</div><div class="line">&lt;/properties&gt;</div></pre></td></tr></table></figure>
-</li>
+<li>–二是修改Thymeleaf版本，3.0对格式要求放宽了<br>在pom.xml中加入</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;properties&gt;</div><div class="line">     &lt;thymeleaf.version&gt;3.0.2.RELEASE&lt;/thymeleaf.version&gt;</div><div class="line">     &lt;thymeleaf-layout-dialect.version&gt;2.0.4&lt;/thymeleaf-layout-dialect.version&gt;</div><div class="line">&lt;/properties&gt;</div></pre></td></tr></table></figure>
 <p>在H5中加入Thymeleaf</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div></pre></td></tr></table></figure>
 <p>关于<a href="http://www.thymeleaf.org/" target="_blank" rel="external">Thymeleaf标签</a></p>
@@ -38,7 +39,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;首先在pom-xml中加入Thymeleaf依赖&quot;&gt;&lt;a href=&quot;#首先在pom-xml中加入Thymeleaf依赖&quot; class=&quot;headerlink&quot; title=&quot;首先在pom.xml中加入Thymeleaf依赖&quot;&gt;&lt;/a&gt;首先在pom.xml中加入T
+      &lt;h3 id=&quot;首先在pom-xml中加入Thymeleaf依赖&quot;&gt;&lt;a href=&quot;#首先在pom-xml中加入Thymeleaf依赖&quot; class=&quot;headerlink&quot; title=&quot;首先在pom.xml中加入Thymeleaf依赖&quot;&gt;&lt;/a&gt;首先在pom.xml中加入Thymeleaf依赖&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;version&amp;gt;1.5.6.RELEASE&amp;lt;/version&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -50,14 +51,15 @@
     <link href="http://wenni328.github.io.com/2017/09/02/vue-webpack%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA/"/>
     <id>http://wenni328.github.io.com/2017/09/02/vue-webpack工程搭建/</id>
     <published>2017-09-02T09:01:15.000Z</published>
-    <updated>2017-09-02T11:16:44.651Z</updated>
+    <updated>2017-09-02T16:52:53.661Z</updated>
     
     <content type="html"><![CDATA[<h3 id="第一步：前提条件"><a href="#第一步：前提条件" class="headerlink" title="第一步：前提条件"></a>第一步：前提条件</h3><ul>
 <li>–node是必须安装好的，不会的同学请移步<a href="http://www.runoob.com/nodejs/" target="_blank" rel="external">node安装</a> </li>
 <li>–git for windows也是必须先安装的</li>
-<li>–npm装逼神器也是需要先安装的，<a href="http://jingyan.baidu.com/article/a17d528506d7f58098c8f2b0.html" target="_blank" rel="external">npm安装</a></li>
+<li>–npm装逼神器也是需要先安装的，<a href="http://jingyan.baidu.com/article/a17d528506d7f58098c8f2b0.html" target="_blank" rel="external">npm安装</a><a id="more"></a>
+查看本地是否成功安装node和npm(建议使用git for window)<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line"></div><div class="line">$ npm -v</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>查看本地是否成功安装node和npm(建议使用git for window)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line"></div><div class="line">$ npm -v</div></pre></td></tr></table></figure></p>
 <h3 id="第二步：安装vue-cli工具"><a href="#第二步：安装vue-cli工具" class="headerlink" title="第二步：安装vue-cli工具"></a>第二步：安装vue-cli工具</h3><p>说白了就是安装好 vue这个指令工具，其他作用我们暂时不管<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g vue-cli  <span class="comment">#等待时间可能会长一些</span></div></pre></td></tr></table></figure></p>
 <h3 id="第三步：生成vue-webpack模板"><a href="#第三步：生成vue-webpack模板" class="headerlink" title="第三步：生成vue-webpack模板"></a>第三步：生成vue-webpack模板</h3><p>vue官方提供了两种webpack模板，分别是vue-webpack-simple和vue-webpack</p>
 <h4 id="Webpack简介"><a href="#Webpack简介" class="headerlink" title="Webpack简介"></a>Webpack简介</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Webpack是当下最热门的前端资源模块化管理和打包工具，</div><div class="line">它可以将很多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源，</div><div class="line">还可以将按需加载的模块进行代码分割，等到实际需要的时候再异步加载。通过 loader 的转换，</div><div class="line">任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。</div></pre></td></tr></table></figure>
@@ -76,7 +78,9 @@
     <summary type="html">
     
       &lt;h3 id=&quot;第一步：前提条件&quot;&gt;&lt;a href=&quot;#第一步：前提条件&quot; class=&quot;headerlink&quot; title=&quot;第一步：前提条件&quot;&gt;&lt;/a&gt;第一步：前提条件&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;–node是必须安装好的，不会的同学请移步&lt;a href=&quot;http://www
+&lt;li&gt;–node是必须安装好的，不会的同学请移步&lt;a href=&quot;http://www.runoob.com/nodejs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node安装&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;–git for windows也是必须先安装的&lt;/li&gt;
+&lt;li&gt;–npm装逼神器也是需要先安装的，&lt;a href=&quot;http://jingyan.baidu.com/article/a17d528506d7f58098c8f2b0.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm安装&lt;/a&gt;
     
     </summary>
     
