@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wenni328.github.io.com/"/>
-  <updated>2017-09-02T16:57:02.674Z</updated>
+  <updated>2017-09-02T16:58:06.549Z</updated>
   <id>http://wenni328.github.io.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wenni328.github.io.com/2017/09/03/springboot-Thymeleaf%E6%A8%A1%E6%9D%BF/"/>
     <id>http://wenni328.github.io.com/2017/09/03/springboot-Thymeleaf模板/</id>
     <published>2017-09-02T16:32:53.000Z</published>
-    <updated>2017-09-02T16:57:02.674Z</updated>
+    <updated>2017-09-02T16:58:06.549Z</updated>
     
     <content type="html"><![CDATA[<h3 id="首先在pom-xml中加入Thymeleaf依赖"><a href="#首先在pom-xml中加入Thymeleaf依赖" class="headerlink" title="首先在pom.xml中加入Thymeleaf依赖"></a>首先在pom.xml中加入Thymeleaf依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.5.6.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -28,11 +28,16 @@
 <h3 id="新建H5页面"><a href="#新建H5页面" class="headerlink" title="新建H5页面"></a>新建H5页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>但是这样的话springboot访问时候会出现页面错误，因为springboot默认使用Thymeleaf2.0,2.0版本对语法格式要求比较严格，比如代码的结尾一定要/&gt;<br>两种解决错误方式</p>
 <ul>
-<li>–一是修改<figure class="highlight plain"><figcaption><span>charset="UTF-8"/>```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- --二是修改Thymeleaf版本，3.0对格式要求放宽了</div><div class="line">在pom.xml中加入</div></pre></td></tr></table></figure>
+<li><p>–一是修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=&quot;UTF-8&quot;/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>–二是修改Thymeleaf版本，3.0对格式要求放宽了<br>在pom.xml中加入</p>
 </li>
 </ul>
-<p><properties><br>     <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version><br>     <thymeleaf-layout-dialect.version>2.0.4</thymeleaf-layout-dialect.version><br></properties><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">在H5中加入Thymeleaf</div></pre></td></tr></table></figure></p>
-<p><html xmlns:th="http://www.thymeleaf.org"><br>```<br>关于<a href="http://www.thymeleaf.org/" target="_blank" rel="external">Thymeleaf标签</a></html></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;properties&gt;</div><div class="line">     &lt;thymeleaf.version&gt;3.0.2.RELEASE&lt;/thymeleaf.version&gt;</div><div class="line">     &lt;thymeleaf-layout-dialect.version&gt;2.0.4&lt;/thymeleaf-layout-dialect.version&gt;</div><div class="line">&lt;/properties&gt;</div></pre></td></tr></table></figure>
+<p>在H5中加入Thymeleaf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div></pre></td></tr></table></figure>
+<p>关于<a href="http://www.thymeleaf.org/" target="_blank" rel="external">Thymeleaf标签</a></p>
 ]]></content>
     
     <summary type="html">
